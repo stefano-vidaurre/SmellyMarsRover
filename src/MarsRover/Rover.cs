@@ -1,14 +1,18 @@
 ﻿namespace MarsRover;
 
+// TODO: Large class
 public class Rover
 {
     private int _x;
     private int _y;
     private char _direction;
+    // TODO: Temporary Field
     private readonly string _availableDirections = "NESW";
     private readonly string[] _obstacles;
     private bool _obstacleFound;
 
+    // TODO: Long parameter list
+    // TODO: Primitive obsession
     public Rover(int x, int y, char direction, string[] obstacles)
     {
         _x = x;
@@ -16,18 +20,25 @@ public class Rover
         _direction = direction;
         _obstacles = obstacles;
     }
-        
+    
+    // TODO: Primitive obsession
     public string GetState()
     {
         return !_obstacleFound ? $"{_x}:{_y}:{_direction}" : $"O:{_x}:{_y}:{_direction}";
     }
 
+    // TODO: Primitive obsession
+    // TODO: Long method
+    // TODO: Comments
+    // TODO: Divergent Change
     public void Execute(string commands)
     {
         foreach(char command in commands)
         {
+            
             if (command == 'M')
             {
+                // TODO: Switch statement
                 switch (_direction)
                 {
                     case 'E':
